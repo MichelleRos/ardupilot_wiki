@@ -5,23 +5,18 @@ What You Need to Build a MultiCopter
 ====================================
 
 This article provides an overview of the main components you will need
-when building a Copter-based multicopter.
+when building an Ardupilot-based blimp.
 
-Multicopter frame including motors, ESCs and propellers
+ArduPilot-capable blimp
 =======================================================
 
-There are numerous frames, ESCs and motors available. Some components
-you might consider are discussed in 
-:ref:`Choosing a Multicopter Frame <choosing-a-frame>` and the 
-:ref:`Detailed Vehicle Builds <common-common-airframe-builds>`.
-
-Many other designs and configurations including Traditional Helicopters
-are also supported.
+As there are currently no commercially-available ArduPilot-compatible blimps
+available, you will need to :ref:`build your own <building-a-blimp>`.
 
 6+ channel RC transmitter and receiver
 ======================================
 
-You'll need a radio control transmitter to manually control your Copter
+You'll need a radio control transmitter to manually control your BLimp
 and to activate its flight modes. You can use any RC
 transmitter/receiver system with at least six channels. Some of the
 options are discussed in the topic :ref:`Compatible RC Transmitter and Receiver Systems <common-rc-systems>`.
@@ -32,21 +27,23 @@ options are discussed in the topic :ref:`Compatible RC Transmitter and Receiver 
 Autopilot (Autopilot hardware)
 ==============================
 
-Copter's autopilot board determines its capabilities for autonomous
-flight. At time of writing (December 2015)
-:ref:`Pixhawk <common-pixhawk-overview>` is highly recommended for general
-use.
+Blimp's autopilot board determines its capabilities for autonomous
+flight. 
 
-Developers creating UAV vision applications should consider using a
-separate Companion Computer, or a Linux based autopilot board.
+If building an indoor blimp, weight will usually be the main consiteration,
+thus the "FPV quadcopter" flight controllers such as the Matek F405-STD are recommended.
 
 For more options, see the topic :ref:`Choosing an Autopilot <common-choosing-a-flight-controller>`.
 
-GPS module
-==========
+Global position
+===============
 
-Your Copter will *require* a GPS module. The recommended module is :ref:`3DR UBlox GPS + Compass Module <common-installing-3dr-ublox-gps-compass-module>` which also
-includes an a compass. You can check out :ref:`other GPS solutions here <common-positioning-landing-page>`.
+In order to use any of the position-controlled flight modes, Blimp requires global position information.
+
+For outdoor use, the simplest option is a :ref:`GPS module <common-installing-3dr-ublox-gps-compass-module>` 
+generally with a compass. 
+
+For indoor use, please see :ref:`the non-GPS options. <common-non-gps-navigation-landing-page>`
 
 .. image:: ../../../images/GPS_TopAndSide.jpg
     :target: ../_images/GPS_TopAndSide.jpg
@@ -57,24 +54,30 @@ LiPo batteries and charger
 .. image:: ../images/lipo_battery.jpg
     :target: ../_images/lipo_battery.jpg
 
-Copter requires a rechargeable lithium polymer (LiPo) battery. 
-A good rule of thumb is to use 1,000 mAH (milliamp hours) per motor. 
-For a Quad copter, a `4000 mAH LiPo like this one <https://hobbyking.com/en_us/turnigy-4000mah-3s-20c-lipo-pack.html?___store=en_us>`__ would work well. 
-While your copter can use only one battery at a time, we recommend having at least two batteries in stock; more batteries means more flight time. 
-You'll also need a `charging station for your batteries such as this one <https://hobbyking.com/en_us/turnigy-2s-3s-balance-charger-direct-110-240v-input.html?___store=en_us>`__.
+Blimp requires a rechargeable lithium polymer (LiPo) battery. Blimps have much
+lower power requirements than most UAVs but also lower payload capacity for their size.
+Since blimps must always be neutrally buoyant (i.e. any extra payload capacity will need
+to be compensated for by weights), it is a good idea to use as big a battery as the blimp
+can use.
 
-Ground Control Station
-======================
+For example, a blimp that is approximately 50 cm in diameter would
+likely be able to fly at a slow pace for about 10-20 minutes on 150 mAh 1S. However it likely has
+enough lift to carry double the capacity or more if there aren't any cameras or other 
+payload added.
 
-The (free and open source) :ref:`Mission Planner <planner:home>` is required if you're going
-to be loading new versions of Copter onto the autopilot, and for
-first-flight tuning and calibration. It runs on a PC and can also be
-used for planning missions.
+While a blimp generally uses only one battery at a time, we recommend having a few batteries in stock; more batteries means more flight time. You'll also need a charger for your batteries.
+
+Ground Control Station (GCS)
+============================
+
+The (free and open source) :ref:`Mission Planner <planner:home>` is recommended if you're going
+to be loading new versions of Blimp onto the autopilot, and for
+first-flight tuning and calibration. It runs on a PC.
 
 .. image:: ../../../images/groundstation-with-MP.jpg
     :target: ../_images/groundstation-with-MP.jpg
 
-Once your Copter is configured, you may find it more convenient to
+Alternatively, you may find it more convenient to
 choose a different ground station - running on the tablet, phone or
 computer of your choice. The main options are discussed in the topic
 :ref:`Choosing a Ground Station <common-choosing-a-ground-station>`.
@@ -82,11 +85,10 @@ computer of your choice. The main options are discussed in the topic
 Telemetry Radio
 ===============
 
-A telemetry radio allows your Copter to communicate with your ground
+A telemetry radio allows your blimp to communicate with your ground
 station from the air using the MAVLink protocol. This allows you to
-interact with your missions in real time and receive streaming data from
-your copter's cameras and other components. This adds considerable
-convenience to your missions!
+interact with Blimp in real time and receive streaming data from
+your blimps.
 
 We recommend the telemetry radio solutions linked from the 
 :ref:`Telemetry Landing Page <common-telemetry-landingpage>`. Remember that if using

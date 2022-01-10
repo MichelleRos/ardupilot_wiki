@@ -25,12 +25,10 @@ System components
 
 -  A Pixhawk or :ref:`other autopilot <common-autopilots>` 
    loaded with the latest version of
-   the `Copter firmware <https://firmware.ardupilot.org/>`__.
+   the `Blimp firmware <https://firmware.ardupilot.org/>`__.
 -  :ref:`Mission Planner software <planner:home>` -- gives
    you an easy point-and-click setup/configuration, and a full-featured
    ground control interface.
--  This Copter Wiki provides all the information you need to set up and
-   operate a multicopter or traditional helicopter. 
 -  A suitable
    :ref:`MultiCopter <build-your-own-multicopter>` or
    :ref:`Helicopter <traditional-helicopters>` for your mission.
