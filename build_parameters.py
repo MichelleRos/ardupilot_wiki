@@ -38,7 +38,7 @@ parser = argparse.ArgumentParser(description="python3 build_parameters.py [optio
 parser.add_argument("--verbose", dest='verbose', action='store_false', default=True, help="show debugging output")
 parser.add_argument("--ardupilotRepoFolder", dest='gitFolder', default="../ardupilot", help="Ardupilot git folder. ")
 parser.add_argument("--destination", dest='destFolder', default="../../../../new_params_mversion", help="Parameters*.rst destination folder.")
-parser.add_argument('--vehicle', dest='single_vehicle', help="If you just want to copy to one vehicle, you can do this. Otherwise it will work for all vehicles (Copter, Plane, Rover, AntennaTracker, Sub)")
+parser.add_argument('--vehicle', dest='single_vehicle', help="If you just want to copy to one vehicle, you can do this. Otherwise it will work for all vehicles (Copter, Plane, Rover, AntennaTracker, Sub, Blimp)")
 args = parser.parse_args()
 
 error_count = 0

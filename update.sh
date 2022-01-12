@@ -40,8 +40,7 @@ test -n "$FORCEBUILD" || {
         fi
     done
     
-    LOGMESSAGESITES="Plane Copter Tracker Rover" 
-    #Blimp
+    LOGMESSAGESITES="Plane Copter Tracker Rover Blimp" 
     mkdir -p old_logmessages new_logmessages
     for site in $LOGMESSAGESITES; do
         wget "https://autotest.ardupilot.org/LogMessages/$site/LogMessages.rst" -O new_logmessages/$site.rst 2> /dev/null

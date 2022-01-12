@@ -1,11 +1,11 @@
-.. _what-you-need:
+.. _getting-started:
 
 ====================================
-What You Need to Build a MultiCopter
+Getting Started
 ====================================
 
 This article provides an overview of the main components you will need
-when building an Ardupilot-based blimp.
+when building and using an Ardupilot-based blimp.
 
 ArduPilot-capable blimp
 =======================================================
