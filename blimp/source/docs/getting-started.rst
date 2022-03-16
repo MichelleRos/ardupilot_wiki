@@ -30,8 +30,8 @@ Autopilot (Autopilot hardware)
 Blimp's autopilot board determines its capabilities for autonomous
 flight. 
 
-If building an indoor blimp, weight will usually be the main consiteration,
-thus the "FPV quadcopter" flight controllers such as the Matek F405-STD are recommended.
+If building an indoor blimp, weight will usually be the main consideration,
+thus the "single board" type of flight controllers are likely to be most suitable.
 
 For more options, see the topic :ref:`Choosing an Autopilot <common-choosing-a-flight-controller>`.
 
@@ -50,9 +50,6 @@ For indoor use, please see :ref:`the non-GPS options. <common-non-gps-navigation
 
 LiPo batteries and charger
 ==========================
-
-.. image:: ../images/lipo_battery.jpg
-    :target: ../_images/lipo_battery.jpg
 
 Blimp requires a rechargeable lithium polymer (LiPo) battery. Blimps have much
 lower power requirements than most UAVs but also lower payload capacity for their size.

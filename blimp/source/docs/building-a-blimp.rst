@@ -9,12 +9,12 @@ Building an indoor finned blimp
 
 This type of blimp has four flapping fins driven by servos, which combine to provide X, Y, Z and Yaw control, while pendulum stability keeps roll and pitch close to zero.
 
-These instructions are specifically for building a ~50cm diameter spherical blimp, although the sizes of parts can be adapted to build bigger blimps of the same type. This size of balloon will give about 50g of lift (excluding the lift required to lift the envelope itself). 
+These instructions are specifically for building a ~50cm diameter spherical blimp, although the sizes of parts can be adapted to build bigger blimps of the same type. This size of balloon will give about 50g of lift (excluding the lift required to lift the envelope itself).
 
 Parts
 ------
 
-#. Flight controller. This is the most complex part to find due to the very specific limitations. Due to the very low weight limit, none of the usual high-end flight controllers are suitable, as they are much too heavy. The most suitable flight controllers are the single-pcb type, such as the Matek F405-STD, which has had extensive testing with ArduPilot:Blimp. It includes a microSD card slot and has good rc input and pwm outputs, which make it highly convenient, especially for development, but it still weighs 9 grams. Using a flight controller like this one which is designed to be powered from 5v rather than battery power is optimal, as flight controllers that can be powered from battery usually require a minimum of 2S or 3S voltage, and the only servos small enough for this application can only run from 5v or less. There are some other flight controllers available which weigh closer to 2-3 grams which would allow for more payload, although they generally have a dataflash chip instead of a microSD card slot (among other things) which is less convenient. 
+#. Flight controller. This is the most complex part to find due to the very specific limitations. Due to the very low weight limit, none of the usual high-end flight controllers are suitable, as they are much too heavy. The most suitable flight controllers are the single-pcb type, such as the Matek F405-STD, which has had extensive testing with ArduPilot:Blimp. It includes a microSD card slot and has good rc input and pwm outputs, which make it highly convenient, especially for development, but it still weighs 9 grams. Using a flight controller like this one which is designed to be powered from 5v rather than battery power is optimal, as flight controllers that can be powered from battery usually require a minimum of 2S or 3S voltage, and the only servos small enough for this application can only run from 5v or less. There are some other flight controllers available which weigh closer to 2-3 grams which would allow for more payload, although they generally have a dataflash chip instead of a microSD card slot (among other things) which is less convenient.
 #. Envelope to be filled with helium. The ~50 cm spherical foil party balloons work quite well for indoor use.
 #. Four servos. The 1.7g micro servos are suggested.
 #. Approx. 1-2mm thick sheets of balsa wood and plastic freezer bags for making the fins.
@@ -27,12 +27,13 @@ Parts
 Wiring
 ------
 
-.. image:: /images/blimp_wiring_diagram.png
-    :target: _images/blimp_wiring_diagram.png
+The 5v step-up converter is added to allow the flight controller to run from a 1S battery. Its input comes from directly from the battery, and the output goes to the flight-controller's 5v pin.
 
-Note that in this diagram, the 5v step-up converter has been used as a "power distribution board" with most of the power connections joining there (the battery's positive terminal is also soldered directly to VIN - it is only displayed differently here for ease of view). 
+The RC receiver is powered from one of the 4.5v pins on the flight controller. This is because these pins are also powered when the flight controller is powered via USB, thus allowing setup and RC calibration without a battery connected. Its CPPM output is connected to the RX2 input of the flight controller.
 
-The OrangeRx receiver is powered from the board's 4v5 pin as this is also powered from USB, to allow setup and RC calibration while connected via USB rather than battery.
+The Wi-Fi module is powered directly from the battery. Its TX and RX pins are connected to the RX3 and TX3 pins on the flight controller.
+
+S1 to S4 are connected to the four servos, which are powered directly from the battery.
 
 Building the Fins
 -----------------
