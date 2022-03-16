@@ -6,7 +6,7 @@ Loading Firmware
 
 These instructions will show you how to download the latest firmware onto the autopilot hardware that already has ArduPilot firmware installed. This process will use the Mission Planner ground control station. See :ref:`common-loading-firmware-onto-chibios-only-boards` .
 
-[copywiki destination="copter,plane,rover,planner"]
+[copywiki destination="copter,plane,rover,planner,blimp"]
 
 Connect autopilot to computer
 =============================
@@ -36,7 +36,7 @@ Install firmware
 ================
 
 In Mission Planner's **SETUP \| Install Firmware** screen
-select the appropriate icon that matches your frame (i.e. Quad, Hexa). 
+select the appropriate icon that matches your frame (i.e. Quad, Hexa).
 Answer **Yes** when it asks you "Are you sure?".
 
 .. figure:: ../../../images/Pixhawk_InstallFirmware.jpg
